@@ -3,10 +3,8 @@ package Shop
 import akka.actor.{ActorRef, ActorSystem}
 import akka.event.Logging
 import akka.stream.ActorMaterializer
-
 import akka.http.scaladsl.Http.ServerBinding
 import akka.http.scaladsl.Http
-
 import scala.concurrent.Future
 import scala.concurrent.duration.{Duration, FiniteDuration}
 

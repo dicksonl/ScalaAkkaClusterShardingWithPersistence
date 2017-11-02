@@ -1,6 +1,5 @@
 [info] Running Cluster.Main 
 [debug] Waiting for threads to exit or System.exit to be called.
-[debug] Waiting for thread run-main-0 to terminate.
 [debug]   Classpath:
 [debug] 	C:\development\GIT\ScalaAkkaClusterShardingWithPersistence\target\scala-2.12\classes
 [debug] 	C:\Users\Dickson.Lui\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.12.3.jar
@@ -40,75 +39,6 @@
 [debug] 	C:\Users\Dickson.Lui\.ivy2\cache\com.github.jnr\jnr-x86asm\jars\jnr-x86asm-1.0.2.jar
 [debug] 	C:\Users\Dickson.Lui\.ivy2\cache\com.github.jnr\jnr-constants\jars\jnr-constants-0.9.9.jar
 [debug] 	C:\Users\Dickson.Lui\.ivy2\cache\com.typesafe.akka\akka-cluster-tools_2.12\jars\akka-cluster-tools_2.12-2.5.6.jar
-[error] (run-main-0) org.jboss.netty.channel.ChannelException: Failed to bind to: /127.0.0.1:2552
-org.jboss.netty.channel.ChannelException: Failed to bind to: /127.0.0.1:2552
-	at org.jboss.netty.bootstrap.ServerBootstrap.bind(ServerBootstrap.java:272)
-	at akka.remote.transport.netty.NettyTransport.$anonfun$listen$1(NettyTransport.scala:417)
-	at scala.util.Success.$anonfun$map$1(Try.scala:251)
-	at scala.util.Success.map(Try.scala:209)
-	at scala.concurrent.Future.$anonfun$map$1(Future.scala:287)
-	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:29)
-	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:29)
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:60)
-	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:55)
-	at akka.dispatch.BatchingExecutor$BlockableBatch.$anonfun$run$1(BatchingExecutor.scala:91)
-	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:12)
-	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:81)
-	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:91)
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:40)
-	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(ForkJoinExecutorConfigurator.scala:43)
-	at akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
-	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
-	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
-	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
-Caused by: java.net.BindException: Address already in use: bind
-	at sun.nio.ch.Net.bind0(Native Method)
-	at sun.nio.ch.Net.bind(Net.java:433)
-	at sun.nio.ch.Net.bind(Net.java:425)
-	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
-	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
-	at org.jboss.netty.channel.socket.nio.NioServerBoss$RegisterTask.run(NioServerBoss.java:193)
-	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.processTaskQueue(AbstractNioSelector.java:391)
-	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:315)
-	at org.jboss.netty.channel.socket.nio.NioServerBoss.run(NioServerBoss.java:42)
-	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
-	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
+[debug] Waiting for thread run-main-0 to terminate.
 [debug] 	Thread run-main-0 exited.
-[debug] Waiting for thread customers-akka.actor.default-dispatcher-3 to terminate.
-[debug] 	Thread customers-akka.actor.default-dispatcher-3 exited.
-[debug] Waiting for thread customers-akka.actor.default-dispatcher-2 to terminate.
-[debug] 	Thread customers-akka.actor.default-dispatcher-2 exited.
-[debug] Interrupting remaining threads (should be all daemons).
-[debug] Interrupting thread customers-9
-[debug] 	Interrupted customers-9
-[debug] Interrupting thread Thread-1
-[debug] 	Interrupted Thread-1
-[debug] Sandboxed run complete..
-java.lang.RuntimeException: Nonzero exit code: 1
-	at scala.sys.package$.error(package.scala:27)
-	at sbt.Defaults$$anonfun$runTask$1$$anonfun$apply$47$$anonfun$apply$48$$anonfun$apply$49.apply(Defaults.scala:803)
-	at sbt.Defaults$$anonfun$runTask$1$$anonfun$apply$47$$anonfun$apply$48$$anonfun$apply$49.apply(Defaults.scala:803)
-	at scala.Option.foreach(Option.scala:236)
-	at sbt.Defaults$$anonfun$runTask$1$$anonfun$apply$47$$anonfun$apply$48.apply(Defaults.scala:803)
-	at sbt.Defaults$$anonfun$runTask$1$$anonfun$apply$47$$anonfun$apply$48.apply(Defaults.scala:801)
-	at scala.Function1$$anonfun$compose$1.apply(Function1.scala:47)
-	at sbt.$tilde$greater$$anonfun$$u2219$1.apply(TypeFunctions.scala:40)
-	at sbt.std.Transform$$anon$4.work(System.scala:63)
-	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228)
-	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228)
-	at sbt.ErrorHandling$.wideConvert(ErrorHandling.scala:17)
-	at sbt.Execute.work(Execute.scala:237)
-	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228)
-	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228)
-	at sbt.ConcurrentRestrictions$$anon$4$$anonfun$1.apply(ConcurrentRestrictions.scala:159)
-	at sbt.CompletionService$$anon$2.call(CompletionService.scala:28)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-[error] (compile:run) Nonzero exit code: 1
+[debug] Waiting for thread customers-scheduler-1 to terminate.

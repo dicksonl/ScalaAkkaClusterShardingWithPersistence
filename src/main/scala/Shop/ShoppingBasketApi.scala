@@ -71,7 +71,6 @@ trait CustomersRoutes extends CustomerMarshalling {
     delete {
       pathPrefix("customer" / ShopperIdSegment / "basket" / ProductIdSegment) {
         (shopperId, productId) =>
-
         pathEnd {
           val removeItem = Basket.RemoveItem(productId, shopperId)
           onSuccess(customers.ask(removeItem)
