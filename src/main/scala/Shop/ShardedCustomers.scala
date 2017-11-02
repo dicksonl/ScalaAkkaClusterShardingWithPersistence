@@ -9,7 +9,7 @@ import akka.cluster.sharding.{ClusterSharding, ClusterShardingSettings}
 
 object ShardedCustomers {
   def props= Props(new ShardedCustomers)
-  def name = "sharded-shoppers"
+  def name = "sharded-customers"
 }
 
 class ShardedCustomers extends Actor {

@@ -15,7 +15,7 @@ object ShardedCustomer {
 
   case object StopShopping
 
-  val shardName: String = "shoppers"
+  val shardName: String = "customers"
 
   val extractEntityId: ShardRegion.ExtractEntityId = {
     case cmd: Customer.Command => (cmd.customerId.toString, cmd)
