@@ -10,8 +10,6 @@ object Main extends App with ShoppingBasketService{
 
   val customers = system.actorOf(ShardedCustomers.props, ShardedCustomers.name)
 
-  val s = system.settings.config.getStringList("akka.cluster.roles")
-
   if(system.settings.config.getStringList("akka.cluster.roles").contains("seed")) {
     startService(customers)
   }
